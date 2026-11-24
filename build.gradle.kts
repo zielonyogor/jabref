@@ -4,6 +4,14 @@ plugins {
     id("org.jabref.gradle.feature.requirementtracing")
     id("org.openrewrite.rewrite") version "7.39.0"
     id("org.cyclonedx.bom") version "3.6.1"
+    id("org.sonarqube") version "7.6.0.18749"
+}
+
+sonar {
+  properties {
+    property("sonar.projectKey", "zielonyogor_jabref")
+    property("sonar.organization", "zielonyogor")
+  }
 }
 
 // OpenRewrite should rewrite all sources
